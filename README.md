@@ -309,7 +309,7 @@ follows.
 
 For example, you could run your program as:
 ```
-prompt> server -d . -p 8003 -t 8 -b 16
+prompt> ./wserver -d . -p 8003 -t 8 -b 16
 ```
 
 In this case, your web server will listen to port 8003, create 8 worker threads for
@@ -340,6 +340,11 @@ the following files:
   these programs. You can type make clean to remove the object files and the
   executables. You can type make server to create just the server program,
   etc. As you create new files, you will need to add them to the Makefile.
+- [`thread_pool.c`](https://github.com/rufquf2628/CS5204-Spring25/blob/main/src/thread_pool.c) and [`thread_pool.h`](https://github.com/rufquf2628/CS5204-Spring25/blob/main/src/thread_pool.h): Contains basic function structure of thread pool. You can use the existing backbone of the structure to implement multi-thread pool for webserver or you can start from your own structure. But, you must implement your thread pool on here to get a point.
+- [`scheduler.c`](https://github.com/rufquf2628/CS5204-Spring25/blob/main/src/scheduler.c) and [`scheduler.h`](https://github.com/rufquf2628/CS5204-Spring25/blob/main/src/scheduler.h): Contains basic function structure of scheduler. You can use the existing backbone of the structure to implement SFF scheduler for webserver or you can start from your own structure. But, you must implement your scheduler on here to get a point.
+- [`data`](https://github.com/rufquf2628/CS5204-Spring25/tree/main/src/data): The `data` directory contains some dummy data with various file sizes. You can use it to test your multi-thread webserver and SFF scheduler. You should set this directory as a basedir of the server. `prompt> ./wserver -d ./data`
+
+- `spin.cgi`: It is a dynamic execution file that client can request the server to spin in some seconds. For example, you can request the server to spin for 5 seconds by command line `./wclient localhost 8000 /spin.cgi?5`. Then, your server (or worker) will spin for 5 second and not accepting any request during that time.
 
 The best way to learn about the code is to compile it and run it. Run the
 server we gave you with your preferred web browser. Run this server with the
@@ -347,6 +352,14 @@ client code we gave you. You can even have the client code we gave you contact
 any other server that speaks HTTP. Make small changes to the server code
 (e.g., have it print out more debugging information) to see if you understand
 how it works.
+
+# What to Submit
+
+You should submit tar file that include `wserver.c`, `wclient.c`, `request.c` / `request.h`, `io_helper.c` / `io_helper.h`, `thread_pool.c` / `thread_pool.h`, `scheduler.c` / `scheduler.h`, `Makefile`, and any files that you added for project.
+You can add your own .c and .h files for this project but your project must be compiled through `make` command. So, you should properly modify `Makefile` to get a point.
+IF YOUR PROJECT IS NOT COMPILED, YOU WILL LOSE POINTS.
+
+Your tar file should have name `yourPID_prj1.tar`. For example, `hangyul_prj1.tar` is proper name to submit.
 
 ## Additional Useful Reading
 
