@@ -160,13 +160,13 @@ are found in the file `io-helper.h`); more about this below.  One should
 always check error codes, even if all you do in response is exit; dropping
 errors silently is **BAD C PROGRAMMING** and should be avoided at all costs.
 
-# Project Implementations
+# Project Implementations (Due April 3)
 
 In this project, you will be adding three key pieces (and one bonus piece for extra credit!) of functionality to the basic web server. 
 First, you will make the web server multi-threaded. Second, you will implement the Smallest File First (SFF) scheduling policy so that requests may be serviced in different order (according to file size). 
 Third, after the second piece is done, you should add a feature that prevents starvation of large file with the SFF scheduling policy.
 
-## Part 1: Multi-threaded
+## Part 1: Multi-threaded (35 pt)
  
 The basic web server that we provided has a single thread of
 control. Single-threaded web servers suffer from a fundamental performance
@@ -231,7 +231,7 @@ explicitly waits for the child CGI process to complete before continuing and
 accepting more HTTP requests. When making your server multi-threaded, you
 should not modify this section of the code.
 
-## Part 2: Scheduling Policies
+## Part 2: Scheduling Policies (40 pt)
 
 In this project, you will implement a Smallest File First (SFF) scheduling policy. 
 Note that when your web server has multiple worker threads running
@@ -252,7 +252,7 @@ request (hint: using `stat()` on the filename) outside of the worker threads;
 you will probably want the master thread to perform this work, which requires
 that it read from the network descriptor.
 
-## Part 3: Preventing Starvation of Large File
+## Part 3: Preventing Starvation of Large File (25 pt)
 
 After you implement the SFF scheduling policy, you will notifiy that it can
 lead to the starvation of requests for large files. Imagine a client requests for 
@@ -263,7 +263,7 @@ You can prevent the starvation of large files by giving higher priority to the f
 that waits enough time to be served. Or, you can intentionally serve the file with 
 lowest priority at certain time. Feel free to design your scheduling policy to prevent starvation.
 
-## Bonus Credit: Security
+## Bonus Credit: Security (10 pt)
 
 Running a networked server can be dangerous, especially if you are not
 careful. Thus, security is something you should consider carefully when
