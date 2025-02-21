@@ -162,10 +162,9 @@ errors silently is **BAD C PROGRAMMING** and should be avoided at all costs.
 
 # Project Implementations
 
-In this project, you will be adding three key pieces (and one bonus piece for extra credit!) of functionality to the
-basic web server. First, you make the web server multi-threaded. Second, you
-will implement Smallest File First (SFF) scheduling policy so that requests are serviced in
-different orders. Third, you should prevent a starvation of large file with SFF scheduling policy.
+In this project, you will be adding three key pieces (and one bonus piece for extra credit!) of functionality to the basic web server. 
+First, you will make the web server multi-threaded. Second, you will implement the Smallest File First (SFF) scheduling policy so that requests may be serviced in different order (according to file size). 
+Third, after the second piece is done, you should add a feature that prevents starvation of large file with the SFF scheduling policy.
 
 ## Part 1: Multi-threaded
  
