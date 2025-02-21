@@ -59,12 +59,12 @@ int main(int argc, char *argv[]) {
     // Now, this is a single-threaded webserver that can handle only
     // single request from a client.
     //
-    // For Part 1, you should change a single-threaded server to multi-threaded
+    // TODO: For Part 1, you should change a single-threaded server to multi-threaded
     // concurrent webserver.
     // This main thread takes a role of starting worker threads and must keep running
     // until any interrupt or signal is coming.
     //
-    // For Part 2, you should implement SFF scheduling policy.
+    // TODO: For Part 2, you should implement SFF scheduling policy.
     // This main thread now accept requests from clients and push them to your
     // SFF scheduler.
     

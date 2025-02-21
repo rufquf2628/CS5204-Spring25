@@ -9,7 +9,7 @@
 
 // Work struct for threads
 //
-// Struct should contain file descriptor of file
+// TODO: Struct should contain file descriptor of file
 // and size of file for sorting
 
 typedef struct _work {
@@ -18,7 +18,7 @@ typedef struct _work {
 
 // Main scheduler struct
 //
-// Scheduler should have sorted buffer to contain
+// TODO: Scheduler should have sorted buffer to contain
 // works by the order of file size
 // Buffer can be other struct or scheduler itself
 // Buffer data structure can be anything that can

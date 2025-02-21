@@ -10,11 +10,11 @@
 
 // Thread pool struct
 //
-// For Part 1, thread pool struct can have
+// TODO: For Part 1, thread pool struct can have
 // data indicates number of worker threads
 // and actual worker threads
 //
-// For Part 2, the struct should contain
+// TODO: For Part 2, the struct should contain
 // lock and condition variables for concurrent
 // work
 
